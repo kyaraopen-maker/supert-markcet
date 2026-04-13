@@ -1,0 +1,380 @@
+/* RESET ET BASES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SECTION GAUCHE */
+.hero-image {
+    flex: 1;
+    background: url('./asset/boutique.jpg') center/cover no-repeat;
+    position: relative;
+    color: white;
+}
+
+.overlay-content {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FORMULAIRE GAUCHE (ADAPTÉ) */
+form {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Gère l'espace entre l'input et les boutons */
+}
+
+input {
+    width: 100%;
+    height: 30px; /* Augmenté légèrement pour le confort */
+    border: none;
+    border-radius: 20px;
+    padding: 0 15px;
+    transform: translate(0px,0px); 
+}
+
+/* CONTENEUR DES BOUTONS DANS LE FORMULAIRE */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    width: 50%;
+    justify-content: center;
+}
+
+.action-buttons button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* SECTION DROITE */
+.content-side {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* ALIGNEMENT ACCUEIL */
+.header-right {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform: translateX(250px);
+}
+
+/* TITRE ET S GÉANT */
+.logo-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.big-s {
+    font-size: 180px;
+    color: #006400;
+    opacity: 0.15;
+    position: absolute;
+    z-index: 0;
+    font-weight: 800;
+    left: 50%;
+    transform: translateX(-220%); /* Ajusté selon ton code */
+}
+
+.main-title {
+    font-size: 55px;
+    color: #008080;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* BOUTONS DROITE */
+.main-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    z-index: 2;
+}
+
+.btn-large {
+    width: 200px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-green { background-color: #008000; color: white; }
+.btn-yellow { background-color: #FFD700; color: black; }
+
+/* LIVREUR */
+.chips-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+    z-index: 1;
+    mix-blend-mode: multiply;
+}
+
+/* FOOTER */
+.social-footer {
+    margin-top: auto;
+    padding-bottom: 80px;
+      font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+h2{
+    transform: translateY(-20px);
+      font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.tagline{
+      font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* --- STYLE MINI PUB CHIC --- */
+.mini-pub-badge {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    background: #ffcc00; /* Jaune solide */
+    border: 2px solid #000;
+    border-radius: 50px; /* Forme pilule très moderne */
+    padding: 6px 6px 6px 18px;
+    box-shadow: 0px 0px 0px #000;
+    font-family: 'Inter', sans-serif;
+    
+    /* Animation de transition */
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animation d'entrée : Glissement depuis la droite avec rebond */
+.mini-pub-badge.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mini-pub-badge.hidden {
+    opacity: 0;
+    transform: translateX(100px);
+    pointer-events: none;
+}
+
+.pub-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #000;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.pub-text strong {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pub-right-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 40px;
+    transition: transform 0.2s;
+}
+
+.pub-right-btn:hover {
+    transform: scale(1.05);
+}
+
+.wa-mini-icon {
+    width: 14px;
+    height: 14px;
+    filter: brightness(0) invert(1);
+}
+
+.mini-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0 5px;
+    color: #686666;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .mini-pub-badge {
+        bottom: 20px;
+        right: 10px;
+        padding: 5px 5px 5px 12px;
+    }
+    .pub-text { font-size: 0.75rem; }
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 768px) {
+    /* On passe de 2 colonnes à 1 seule colonne */
+    .container {
+        flex-direction: column;
+        height: auto; /* Permet à la page de défiler vers le bas */
+        overflow-y: auto;
+    }
+
+    .hero-image, .content-side {
+        width: 100%;
+        min-height: 100vh; /* Chaque section prend toute la hauteur de l'écran mobile */
+    }
+
+    /* Ajustement du formulaire sur mobile */
+    form {
+        width: 90%;
+        height: auto;
+        gap: 20px;
+    }
+
+    input {
+        width: 100%;
+        height: 45px; /* Plus haut sur mobile pour toucher facilement avec le doigt */
+    }
+
+    .action-buttons {
+        width: 100%; /* Les boutons prennent toute la largeur sur mobile */
+        flex-direction: column; /* On les empile pour qu'ils soient plus gros */
+    }
+
+    /* Ajustement du titre et du "S" */
+    .main-title {
+        font-size: 40px; /* On réduit un peu la taille du texte */
+    }
+
+    .big-s {
+        font-size: 120px;
+        transform: translateX(-150%); /* On recentre le S pour les petits écrans */
+    }
+
+    /* Correction de l'accueil qui était décalé avec transform */
+    .header-right {
+        transform: translateX(0); 
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Ajustement du livreur pour qu'il ne cache pas le texte */
+    .chips-img {
+        width: 150px;
+        opacity: 0.5; /* Un peu plus transparent sur mobile */
+    }
+
+    /* Boutons de droite sur mobile */
+    .main-actions {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .btn-large {
+        width: 90%;
+    }
+}
+
+
+
+
+/* Le conteneur qui couvre tout l'écran */
+.modal-section {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond sombre léger */
+    backdrop-filter: blur(10px); /* C'EST ÇA QUI FAIT LE FLOU DERRIÈRE */
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* La boîte blanche (le message) qui apparaît devant */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.items-list p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px 0;
+ font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
+}

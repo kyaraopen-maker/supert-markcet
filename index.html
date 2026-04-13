@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Market - Livraison Rapide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./asset/boutique.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+    <main class="container">
+        <section class="hero-image">
+            <div class="overlay-content">
+                <h2>Rechercher Votre Article</h2>
+                <form action="#" class="search-form-container">
+                    <div class="search-container">
+                        <input type="text" id="user-search" placeholder="Ex: pain, lait, riz...">
+                    </div>
+                    <div class="action-buttons">
+                        <button type="submit" class="btn btn-green">Rechercher</button>
+                        <button type="button" id="open-commande-hero" class="btn btn-yellow">Commander</button>
+                    </div>
+                </form>
+                <div class="contact-info">
+                    <p>Retrouvez notre point de vente à la Base Goudron COMUS, Brazzaville. Service de proximité et réactivité garantie.</p>
+                    <p>📞 06 842 46 24</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-side">
+            <div class="header-right">
+                <div class="home-icon">🏠<br><span>accueil</span></div>
+            </div>
+            <div class="brand-section">
+                <div class="logo-wrapper">
+                    <span class="big-s">S</span>
+                    <h1 class="main-title">uper market</h1>
+                </div>
+                <p class="tagline">passez vos commandes depuis votre canapé</p>
+                <h3 class="delivery-text">livraison-rapide</h3>
+            </div>
+            <div class="main-actions">
+                <button id="open-commande" class="btn-large btn-green">commander</button>
+                <button id="open-panier" class="btn-large btn-yellow">vérifier votre panier</button>
+            </div>
+            <div class="social-footer">
+                <div class="social-icons">
+                    <span class="icon fb"><img src="./asset/icons8-facebook.svg" alt="FB"></span>
+                    <span class="icon ig"><img src="./asset/icons8-instagram (1).svg" alt="IG"></span>
+                    <span class="icon wa"><img src="./asset/N4.svg" alt="WA"></span>
+                </div>
+                <p class="footer-text">Retrouvez-nous sur nos différentes plateformes</p>
+            </div>
+            <img src="./asset/livreure.jpg" alt="Livreur" class="chips-img">
+        </section>
+    </main>
+
+    <section id="panier-section" class="modal-section" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>🛒 Votre Panier</h2>
+            <div id="liste-panier" class="items-list">
+                <p>Votre panier est vide.</p>
+            </div>
+            <button id="btn-passer-paiement" class="btn-large btn-green" style="margin-top:20px;">Passer au paiement</button>
+        </div>
+    </section>
+
+    <section id="commande-section" class="modal-section" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Détails</h2>
+            <p id="modal-details" style="margin-bottom:20px; font-weight:bold;"></p>
+
+            <div id="action-panier-zone" style="display:none; margin-top: 20px;">
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <button id="btn-ajouter-panier" type="button" class="btn-large btn-green" style="flex: 1;">Mettre au panier</button>
+                    <button id="btn-sortir-recherche" type="button" class="btn-large btn-yellow" style="flex: 1;">Sortir</button>
+                </div>
+            </div>
+
+            <form class="order-form" id="form-livraison" style="display:none;">
+                <hr style="margin: 20px 0; opacity: 0.2;">
+                
+                <div style="text-align:left; margin-bottom:15px;">
+                    <label style="font-size:0.9rem; font-weight:bold;">Votre commande :</label>
+                    <input type="text" id="article-manuel" name="Article" placeholder="Ex: 2 pains, 1L de lait..." required style="border: 2px solid #ffcc00; width:100%; padding:10px; border-radius:8px;">
+                </div>
+
+                <input type="text" name="Nom" placeholder="Nom complet" required>
+                <input type="text" name="Adresse" placeholder="Adresse (Brazzaville)" required>
+                <input type="tel" name="Telephone" placeholder="Téléphone" required>
+                
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <button type="submit" class="btn-large btn-yellow" style="flex: 2;">Confirmer la livraison</button>
+                    <button type="button" id="btn-sortir-commande" class="btn-large btn-red" style="flex: 1; background-color: #ff4d4d; color: white; border: none; border-radius: 12px; cursor: pointer;">Sortir</button>
+                </div>
+            </form>
+
+        </div>
+
+
+
+    </section>
+
+
+<div id="badge-trynity" class="mini-pub-badge hidden">
+    <div class="pub-left">
+        <span class="pub-text">Propulsé par <strong>Trynity</strong></span>
+    </div>
+    <a href="https://wa.me/242068424624" target="_blank" class="pub-right-btn">
+        <img src="./asset/N4.svg" alt="WA" class="wa-mini-icon">
+        Contact
+    </a>
+    <button id="close-badge" class="mini-close">&times;</button>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
